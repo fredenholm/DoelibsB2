@@ -234,8 +234,9 @@ int drawable abc_textfield_searchview_holo_dark 0x7f020053
 int drawable abc_textfield_searchview_holo_light 0x7f020054
 int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
-int drawable ic_launcher 0x7f020057
-int drawable search_icon 0x7f020058
+int drawable ic_action_camera 0x7f020057
+int drawable ic_launcher 0x7f020058
+int drawable search_icon 0x7f020059
 int id LinearLayout1 0x7f090044
 int id action_bar 0x7f09001c
 int id action_bar_activity_content 0x7f090001
@@ -245,11 +246,12 @@ int id action_bar_root 0x7f09001a
 int id action_bar_subtitle 0x7f090023
 int id action_bar_title 0x7f090022
 int id action_context_bar 0x7f09001d
-int id action_createbook 0x7f090048
+int id action_createbook 0x7f090049
 int id action_menu_divider 0x7f090002
 int id action_menu_presenter 0x7f090003
 int id action_mode_close_button 0x7f090024
-int id action_settings 0x7f090047
+int id action_scan 0x7f090047
+int id action_settings 0x7f090048
 int id activity_chooser_view_content 0x7f090025
 int id always 0x7f09000f
 int id beginning 0x7f090016
@@ -365,6 +367,7 @@ int string hello_world 0x7f0a000e
 int string information 0x7f0a001d
 int string isbn 0x7f0a0017
 int string publication_year 0x7f0a001a
+int string scan 0x7f0a001e
 int string title 0x7f0a0018
 int string title_account_section 0x7f0a0015
 int string title_activity_create_book 0x7f0a0016

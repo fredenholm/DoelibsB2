@@ -22,6 +22,7 @@
     <string name="description">Book Description</string>
     <string name="addbook">Add a book</string>
     <string name="information">Book Information</string>
+    <string name="scan">Scan ISBN Number</string>
     
 
 </resources>

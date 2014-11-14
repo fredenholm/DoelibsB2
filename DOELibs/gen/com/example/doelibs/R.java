@@ -1077,8 +1077,9 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int ic_launcher=0x7f020057;
-        public static final int search_icon=0x7f020058;
+        public static final int ic_action_camera=0x7f020057;
+        public static final int ic_launcher=0x7f020058;
+        public static final int search_icon=0x7f020059;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090044;
@@ -1090,11 +1091,12 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f090023;
         public static final int action_bar_title=0x7f090022;
         public static final int action_context_bar=0x7f09001d;
-        public static final int action_createbook=0x7f090048;
+        public static final int action_createbook=0x7f090049;
         public static final int action_menu_divider=0x7f090002;
         public static final int action_menu_presenter=0x7f090003;
         public static final int action_mode_close_button=0x7f090024;
-        public static final int action_settings=0x7f090047;
+        public static final int action_scan=0x7f090047;
+        public static final int action_settings=0x7f090048;
         public static final int activity_chooser_view_content=0x7f090025;
         public static final int always=0x7f09000f;
         public static final int beginning=0x7f090016;
@@ -1269,6 +1271,7 @@ containing a value of this type.
          */
         public static final int isbn=0x7f0a0017;
         public static final int publication_year=0x7f0a001a;
+        public static final int scan=0x7f0a001e;
         public static final int title=0x7f0a0018;
         public static final int title_account_section=0x7f0a0015;
         public static final int title_activity_create_book=0x7f0a0016;

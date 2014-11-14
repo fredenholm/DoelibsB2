@@ -2,5 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.doelibs.CreateBookActivity" >
-
+<item
+        android:id="@+id/action_scan"
+        android:title="@string/scan"
+        android:icon="@drawable/ic_action_camera"
+        app:showAsAction="always|withText"
+    />
 </menu>
