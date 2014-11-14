@@ -7,10 +7,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
 
@@ -69,12 +71,27 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        
+        // Create Book button
+        if (id == R.id.action_createbook) {
+        	CreateBook(mViewPager);
+            return true;
+        }
+        
         if (id == R.id.action_settings) {
             return true;
         }
+        
         return super.onOptionsItemSelected(item);
     }
 
+    /** Called when the user clicks the Create Book button */
+    public void CreateBook(View view) {
+    // Start Activity in response to button
+    	Intent intent = new Intent(this, CreateBookActivity.class);
+    	startActivity(intent);
+    }
+    
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
         // When the given tab is selected, switch to the corresponding page in
         // the ViewPager.
