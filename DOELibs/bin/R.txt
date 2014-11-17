@@ -346,7 +346,8 @@ int layout activity_main 0x7f030019
 int layout activity_search 0x7f03001a
 int layout fragment_browse 0x7f03001b
 int layout fragment_browseresult 0x7f03001c
-int layout support_simple_spinner_dropdown_item 0x7f03001d
+int layout loans_fragment 0x7f03001d
+int layout support_simple_spinner_dropdown_item 0x7f03001e
 int menu create_book 0x7f0c0000
 int menu main 0x7f0c0001
 int menu search 0x7f0c0002
