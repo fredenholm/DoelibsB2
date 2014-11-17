@@ -2,16 +2,19 @@ package com.example.doelibs;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class BrowseFragment extends Fragment {
-	EditText _edit;
-	ImageView _searchImageView; 
+	EditText _input;
+	ImageView _searchImage; 
+	LinearLayout _inputLayout;
 	
 	public static BrowseFragment newInstance() {
 		BrowseFragment fragment = new BrowseFragment();
@@ -22,24 +25,33 @@ public class BrowseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_browse, container, false);
         
-        _edit = (EditText) rootView.findViewById(R.id.edit);
-        _searchImageView = (ImageView)rootView.findViewById(R.id.browse_searchImageView);
+        _input = (EditText) rootView.findViewById(R.id.browse_input);
+        _searchImage = (ImageView)rootView.findViewById(R.id.browse_searchImage);
+        _inputLayout = (LinearLayout) rootView.findViewById(R.id.browse_inputLayout);
         
-        _edit.setOnClickListener(new OnClickListener() {
+        
+        _inputLayout.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				_edit.requestFocus();
+				_input.requestFocus();
 			}
 		});
         
-        _searchImageView.setOnClickListener(new OnClickListener() {
+        _searchImage.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				Fragment newFragment = new BrowseResultFragment();
 				
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
+				
+				ft.replace(R.id.fragment_browse, newFragment);
+				ft.addToBackStack(null);
+				ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+				ft.commit();
 			}
 		});
         
-        _edit.requestFocus();
+        _input.requestFocus();
         return rootView;
     }
     

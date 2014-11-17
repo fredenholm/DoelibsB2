@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/fragment_browse"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
@@ -10,16 +10,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.doelibs.SearchActivity" >
-
-    <!-- <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="SEARCH" 
-        android:textSize="30sp"        
-        />  -->
     
     <LinearLayout
+        android:id="@+id/browse_inputLayout"
         android:layout_width="match_parent"
     	android:layout_height="0dp"
     	android:layout_weight="1"
@@ -27,18 +20,18 @@
     	android:gravity="center"
     	android:clickable="true">
 	    <EditText 
-	        android:id="@+id/edit"
+	        android:id="@+id/browse_input"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:gravity="center"
 	        android:maxLines="1"      
-	        android:hint="TITLE OR AUTHOR"
+	        android:hint="@string/browsehint"
 	        android:textSize="20sp"	        
 	        />
     </LinearLayout>
       
     <ImageView 
-        android:id="@+id/browse_searchImageView"
+        android:id="@+id/browse_searchImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/search_icon"

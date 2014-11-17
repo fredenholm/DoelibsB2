@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extracts string &apos;Icon, ignore me.&apos; into R.string.browseicon_info" description="Extracts string &apos;Icon, ignore me.&apos; into R.string.browseicon_info" file="/DOELibs/res/layout/fragment_browseresult.xml" flags="6" id="com.android.ide.eclipse.adt.refactoring.extract.string" mode="EDIT_SOURCE" proj="/DOELibs" rplc-all-java="false" rplc-all-xml="false" sel-end="995" sel-start="951" stamp="1416242510682" tok-esc="Icon, ignore me." xml-attr-name="android:contentDescription"/>
+</session>

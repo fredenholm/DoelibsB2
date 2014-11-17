@@ -14,6 +14,9 @@
     <string name="title_account_section">Account</string>
     <string name="title_activity_create_book">Create Book</string>
     
+    <!-- Browse Fragment -->
+    <string name="browsehint">TITLE / AUTHOR</string>
+    
     <!-- Create Book Activity -->
     <string name="isbn">ISBN Number</string>
     <string name="title">Book Title</string>
@@ -23,6 +26,7 @@
     <string name="addbook">Add a book</string>
     <string name="information">Book Information</string>
     <string name="scan">Scan ISBN Number</string>
+    <string name="browseicon_info">Icon, ignore me.</string>
     
 
 </resources>

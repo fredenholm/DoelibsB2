@@ -1,0 +1,7 @@
+ackage com.example.doelibs;
+
+import fragment;
+
+public class BrowseResultFragment extends fragment {
+
+}
