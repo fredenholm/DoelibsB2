@@ -117,6 +117,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             switch(position) {
 	            case 0:
 	            	return BrowseFragment.newInstance();
+	            case 1:
+	            	return LoansFragment.newInstance();
             }
             return null;
         }
@@ -124,7 +126,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 1;
+            return 2;
         }
 
         @Override
@@ -135,10 +137,6 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
                     return getString(R.string.title_browse_section).toUpperCase(l);
                 case 1:
                     return getString(R.string.title_loans_section).toUpperCase(l);
-                case 2:
-                    return getString(R.string.title_create_section).toUpperCase(l);
-                case 3:
-                	return getString(R.string.title_account_section).toUpperCase(l);
             }
             return null;
         }
