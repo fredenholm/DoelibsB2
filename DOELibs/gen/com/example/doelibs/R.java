@@ -1276,6 +1276,15 @@ containing a value of this type.
         public static final int browsehint=0x7f0a0017;
         public static final int browseicon_info=0x7f0a0020;
         public static final int description=0x7f0a001c;
+        public static final int dialog_alert_error_cancel=0x7f0a0025;
+        public static final int dialog_alert_error_title=0x7f0a0026;
+        public static final int dialog_alert_error_unhandledMessage=0x7f0a0027;
+        public static final int dialog_nointernet_message=0x7f0a0022;
+        /**  Standard Dialog Messages 
+         */
+        public static final int dialog_nointernet_title=0x7f0a0021;
+        public static final int dialog_timeout_message=0x7f0a0024;
+        public static final int dialog_timeout_title=0x7f0a0023;
         public static final int hello_world=0x7f0a000e;
         public static final int information=0x7f0a001e;
         /**  Create Book Activity 

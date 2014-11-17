@@ -28,5 +28,15 @@
     <string name="scan">Scan ISBN Number</string>
     <string name="browseicon_info">Icon, ignore me.</string>
     
+    <!-- Standard Dialog Messages -->
+    <string name="dialog_nointernet_title">Communication problems</string>
+    <string name="dialog_nointernet_message">Make sure you are connected to the internet.</string>
+    <string name="dialog_timeout_title">Communication problems</string>
+    <string name="dialog_timeout_message">Problems sending request. Make sure you are connected to the internet.</string>
+    <string name="dialog_alert_error_cancel">Cancel</string>
+    <string name="dialog_alert_error_title">Error</string>
+    <string name="dialog_alert_error_unhandledMessage">Internal error. Communication problems with the server.</string>
+    
+    
 
 </resources>
