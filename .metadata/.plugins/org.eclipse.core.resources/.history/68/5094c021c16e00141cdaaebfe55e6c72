@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DOELibs</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_createbook">Create Book</string>
+    <string name="title_activity_search">SearchActivity</string>
+
+    <!-- TABS -->
+    <string name="title_browse_section">Browse</string>
+    <string name="title_loans_section">Loans</string>
+    <string name="title_create_section">Create</string>
+    <string name="title_account_section">Account</string>
+    <string name="title_activity_create_book">Create Book</string>
+
+    <!-- Browse Fragment -->
+    <string name="browsehint">TITLE / AUTHOR</string>
+
+    <!-- Create Book Activity -->
+    <string name="isbn">ISBN Number</string>
+    <string name="title">Book Title</string>
+    <string name="author">Author Name</string>
+    <string name="publication_year">Publication Year</string>
+    <string name="description">Book Description</string>
+    <string name="addbook">Add a book</string>
+    <string name="information">Book Information</string>
+    <string name="scan">Scan ISBN Number</string>
+    <string name="browseicon_info">Icon, ignore me.</string>
+
+    <!-- Standard Dialog Messages -->
+    <string name="dialog_nointernet_title">Communication problems</string>
+    <string name="dialog_nointernet_message">Make sure you are connected to the internet.</string>
+    <string name="dialog_timeout_title">Communication problems</string>
+    <string name="dialog_timeout_message">Problems sending request. Make sure you are connected to the internet.</string>
+    <string name="dialog_alert_error_cancel">Cancel</string>
+    <string name="dialog_alert_error_title">Error</string>
+    <string name="dialog_alert_error_unhandledMessage">Internal error. Communication problems with the server.</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login_register">Login / Register</string>
+
+</resources>
