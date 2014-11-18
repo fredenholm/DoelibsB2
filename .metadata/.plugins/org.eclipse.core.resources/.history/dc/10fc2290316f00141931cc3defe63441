@@ -1,0 +1,13 @@
+package com.example.doelibs;
+
+public class RegisterFragment extends Fragment{
+	
+	
+	
+	
+	public static RegisterFragment newInstance() {
+		RegisterFragment fragment = new RegisterFragment();
+        return fragment;
+    }
+
+}

@@ -1,0 +1,15 @@
+package com.example.doelibs;
+
+import android.app.Fragment;
+
+public class RegisterFragment extends Fragment{
+	
+	
+	
+	
+	public static RegisterFragment newInstance() {
+		RegisterFragment fragment = new RegisterFragment();
+        return fragment;
+    }
+
+}

@@ -4,6 +4,7 @@ package com.example.doelibs;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,9 @@ public class LoginFragment extends Fragment{
 	
 Button _btnLogin,_btnRegister;
 EditText _editEmail;
+
+
+
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -25,6 +29,8 @@ EditText _editEmail;
         _btnLogin=(Button)rootView.findViewById(R.id. btnLogin); 
         _btnRegister=(Button)rootView.findViewById(R.id. btnRegister); 
         _editEmail=(EditText)rootView.findViewById(R.id.editEmail);        
+        
+        _editEmail.setHint("Email");
         
         
         
@@ -42,7 +48,14 @@ EditText _editEmail;
         _btnRegister.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
+//				Fragment newFragment = new RegisterFragment();
+//				
+//				FragmentTransaction ft = getFragmentManager().beginTransaction();
+//				//ft.remove(new LoginFragment());
+//				ft.replace(R.id.fragment_login, newFragment);
+//				ft.addToBackStack(null);
+//				ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+//				ft.commit();
 			}
 		});
        

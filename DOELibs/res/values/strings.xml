@@ -42,5 +42,7 @@
     <string name="password">Password</string>
     <string name="register">Register</string>
     <string name="log_in">Log In</string>
+    <string name="register_account">register_account</string>
+    
 
 </resources>

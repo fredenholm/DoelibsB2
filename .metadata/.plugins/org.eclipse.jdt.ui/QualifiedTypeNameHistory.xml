@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.example.doelibs.R.id"/>
 <fullyQualifiedTypeName name="android.widget.LinearLayout"/>
 <fullyQualifiedTypeName name="android.app.FragmentTransaction"/>
 <fullyQualifiedTypeName name="android.support.v4.app.FragmentTransaction"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.app.Fragment"/>
+<fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
+<fullyQualifiedTypeName name="com.example.doelibs.RegisterFragment"/>
+<fullyQualifiedTypeName name="com.example.doelibs.R.id"/>
+<fullyQualifiedTypeName name="com.example.doelibs.R.layout"/>
+<fullyQualifiedTypeName name="com.example.doelibs.LoginFragment"/>
 </qualifiedTypeNameHistroy>
