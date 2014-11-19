@@ -1,38 +1,33 @@
 package com.example.doelibs;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 
 public class LoginActivity extends ActionBarActivity {
-
+	private ActionBar _actionBar;
+	private LoginFragment _loginFragment;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);		
+		setContentView(R.layout.activity_login);	
 		
-	}	
-	
+		_actionBar = getSupportActionBar();
+		_actionBar.setTitle(getString(R.string.app_name));
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login, menu);
-		return true;
+		_loginFragment = new LoginFragment();
+		navigateTo(_loginFragment, false, null);
 	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}	
 	
+	public void navigateTo(Fragment fragment, boolean addToBackStack, String tag) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        if(addToBackStack)
+        	transaction.addToBackStack(null);
+        transaction.replace(R.id.frame_content, fragment, tag).commit();
+	}
 	
 }

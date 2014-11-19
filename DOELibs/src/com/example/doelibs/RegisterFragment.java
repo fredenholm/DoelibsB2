@@ -8,10 +8,6 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-
-
-
-
 public class RegisterFragment extends Fragment{
 	
 	Button _register;
@@ -19,21 +15,15 @@ public class RegisterFragment extends Fragment{
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_register, container, false);
-        
-        
+ 
         _register=(Button)rootView.findViewById(R.id.register); 
         _register.setOnClickListener(new OnClickListener() {
-        @Override
-		public void onClick(View v) {			
-
-		}
-	});    
+	        @Override
+			public void onClick(View v) {			
 	
-	
+			}
+		});    
+        
         return rootView;
 	}
-	
-	
-	
-
 }
