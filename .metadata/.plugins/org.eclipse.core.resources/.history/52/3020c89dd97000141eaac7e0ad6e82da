@@ -2,6 +2,9 @@ package com.example.doelibs;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.doelibs.REST.LoginTask;
+
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,7 +22,9 @@ public class RegisterFragment extends Fragment{
 	Button _register;
 	Spinner _spin;
 	Switch _roleSwitch;
-	EditText _editFirstName, _editLastName, _editEmail, _editPassword, _editCofirmPassword;	
+	EditText _editFirstName, _editLastName, _editEmail, _editPassword, _editCofirmPassword;
+	
+	
 	
 	
 	@Override
@@ -39,16 +44,31 @@ public class RegisterFragment extends Fragment{
 		_roleSwitch.setTextOff("Staff");
 		_roleSwitch.setTextOn("Student");  
 		
-		_spin=(Spinner)rootView.findViewById(R.id.spin);
+_spin=(Spinner)rootView.findViewById(R.id.spin);
 		
+//ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.staff,android.R.layout.simple_spinner_item);
+//adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//_spin.setAdapter(adapter);
+//
+//// or
+//		
+//	    List<String> toSpin = new ArrayList<String>();
+//	    toSpin.add("Staff1");
+//	    toSpin.add("Staff2");
+//	    toSpin.add("Staff3");
+//	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,toSpin);
+//	    _spin.setAdapter(adapter);
+//		
 		
-	    List<String> toSpin = new ArrayList<String>();
-	    toSpin.add("Staff1");
-	    toSpin.add("Staff2");
-	    toSpin.add("Staff3");
-	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getBaseContext(),android.R.layout.simple_spinner_item,toSpin);
 
-	    _spin.setAdapter(adapter);     
+//		When user has chosen an option from the drop down list
+//		void onItemSelected(AdapterView<?> src, View selectedView,
+//		int selectedPosition, long selectedId)
+//		When currently selected optionis unselected
+//		void onNothingSelected(AdapterView<?> src)       
+        
+        
+        
         
         
         
@@ -87,7 +107,7 @@ public class RegisterFragment extends Fragment{
 		}
 		
 		if(!error) {
-			
+			//new LoginTask(this, _editEmail.getText().toString(), _editPassword.getText().toString()).execute();
 		}
 	}
 	}

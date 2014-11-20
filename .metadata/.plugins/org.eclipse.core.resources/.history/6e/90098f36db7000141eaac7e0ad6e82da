@@ -2,6 +2,9 @@ package com.example.doelibs;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.doelibs.REST.LoginTask;
+
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,7 +22,9 @@ public class RegisterFragment extends Fragment{
 	Button _register;
 	Spinner _spin;
 	Switch _roleSwitch;
-	EditText _editFirstName, _editLastName, _editEmail, _editPassword, _editCofirmPassword;	
+	EditText _editFirstName, _editLastName, _editEmail, _editPassword, _editCofirmPassword;
+	
+	
 	
 	
 	@Override
