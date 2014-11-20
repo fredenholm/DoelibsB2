@@ -1,6 +1,6 @@
 package com.example.doelibs;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -28,6 +28,13 @@ public class LoginActivity extends ActionBarActivity {
         if(addToBackStack)
         	transaction.addToBackStack(null);
         transaction.replace(R.id.frame_content, fragment, tag).commit();
+	}
+
+	public void loggedInSuccessful() {
+		// Invoked from LoginTask if successful login
+		Intent intent = new Intent(this, MainActivity.class);
+		startActivity(intent);
+		this.finish();
 	}
 	
 }

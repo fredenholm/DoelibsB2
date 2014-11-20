@@ -41,6 +41,9 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="login_register">Login</string>
     
+    <!-- Login Fragment -->
+    <string name="dialog_login_loading">Logging in</string>
+    
     
     <!-- Standard Dialog Messages -->
     <string name="dialog_nointernet_title">Communication problems</string>
@@ -51,4 +54,10 @@
     <string name="dialog_alert_error_title">Error</string>
     <string name="dialog_alert_error_unhandledMessage">Internal error. Communication problems with the server.</string>
 
+    <!-- REST API -->
+    <string name="rest_callingSystem">doelibs</string>
+    <string name="rest_login">http://doelibs.se.preview.binero.se/api/Account/Login</string>
+    
+    
+    
 </resources>

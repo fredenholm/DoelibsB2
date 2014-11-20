@@ -1,10 +1,11 @@
 package com.example.doelibs;
 
 
+import com.example.doelibs.REST.LoginTask;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,7 @@ import android.widget.EditText;
 public class LoginFragment extends Fragment{
 	
 	Button _btnLogin,_btnRegister;
-	EditText _editEmail;
+	EditText _editEmail, _editPassword;
 	LoginActivity _activity;
 
 	@Override
@@ -27,16 +28,16 @@ public class LoginFragment extends Fragment{
         _btnLogin=(Button)rootView.findViewById(R.id. btnLogin); 
         _btnRegister=(Button)rootView.findViewById(R.id. btnRegister); 
         _editEmail=(EditText)rootView.findViewById(R.id.editEmail);        
+        _editPassword=(EditText)rootView.findViewById(R.id.editPassword);        
         
         _editEmail.setHint("Email");
         
         _btnLogin.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getActivity(), MainActivity.class);
-				startActivity(intent);
+				login();
 			}
-		});    
+		}); 
         
         _btnRegister.setOnClickListener(new OnClickListener() {
 			@Override
@@ -44,12 +45,24 @@ public class LoginFragment extends Fragment{
 				_activity.navigateTo(new RegisterFragment(), true, null);
 			}
 		});
-       
         
         return rootView;         
-        
-        }
+	}
 	
-	
+	private void login() {
+		boolean error = false;
+		if(_editEmail.length() == 0) {
+			_editEmail.setError("Please enter your email");
+			error = true;
+		}
+		if(_editPassword.length() == 0) {
+			_editPassword.setError("Please enter you Password");
+			error = true;
+		}
+		
+		if(!error) {
+			new LoginTask(this, _editEmail.getText().toString(), _editPassword.getText().toString()).execute();
+		}
+	}
 
 }
