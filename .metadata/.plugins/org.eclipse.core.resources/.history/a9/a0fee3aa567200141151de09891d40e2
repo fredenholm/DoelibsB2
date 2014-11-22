@@ -37,11 +37,4 @@ public class LoginActivity extends ActionBarActivity {
 		this.finish();
 	}
 	
-
-
-	public void registerSuccessful() {
-		// Invoked from RegisterTask if successful registration
-		navigateTo(new LoginFragment(), true, null);
-	}
-	
 }

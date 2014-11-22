@@ -41,7 +41,9 @@ public class LoginActivity extends ActionBarActivity {
 
 	public void registerSuccessful() {
 		// Invoked from RegisterTask if successful registration
-		navigateTo(new LoginFragment(), true, null);
+		Intent intent = new Intent(this, MainActivity.class);
+		startActivity(intent);
+		this.finish();
 	}
 	
 }

@@ -43,7 +43,6 @@
     
     <!-- Login Fragment -->
     <string name="dialog_login_loading">Logging in</string>
-    <string name="dialog_processing">Processing</string>
     
     
     <!-- Standard Dialog Messages -->
@@ -58,7 +57,6 @@
     <!-- REST API -->
     <string name="rest_callingSystem">doelibs</string>
     <string name="rest_login">http://doelibs.se.preview.binero.se/api/Account/Login</string>
-    <string name="rest_register">http://doelibs.se.preview.binero.se/api/Account/Register</string>
     
     
     

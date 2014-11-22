@@ -18,7 +18,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 
-public class RegisterFragment extends Fragment{	
+public class RegisterFragment extends Fragment{
 	
 	Button _register;
 	Spinner _spin;
@@ -94,8 +94,6 @@ public class RegisterFragment extends Fragment{
 //			new RegisterTask(this, _editFirstName.getText().toString(), _editLastName.getText().toString(),
 //					_editEmail.getText().toString(), _editPassword.getText().toString(), 
 //					String.valueOf(_spin.getSelectedItemId()), String.valueOf((_roleSwitch.getText().toString() == "Staff")));
-		
-			
-		}		
+		}
 	}
 	}
