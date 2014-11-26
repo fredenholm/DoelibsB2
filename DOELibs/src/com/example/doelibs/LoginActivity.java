@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import Objects.User;
+import Objects.helper;
 
 public class LoginActivity extends ActionBarActivity {
 	private ActionBar _actionBar;
@@ -14,6 +16,11 @@ public class LoginActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		User user = helper.getCurrentPerson(this);
+		if(user.isLoggedIn())
+			loggedInSuccessful();
+		
 		setContentView(R.layout.activity_login);	
 		
 		_actionBar = getSupportActionBar();

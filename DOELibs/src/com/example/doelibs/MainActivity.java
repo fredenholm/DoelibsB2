@@ -1,6 +1,9 @@
 package com.example.doelibs;
 
 import java.util.Locale;
+
+import Objects.User;
+import Objects.helper;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -16,8 +19,9 @@ import android.view.View;
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
 
-	SectionsPagerAdapter mSectionsPagerAdapter;
-	ViewPager mViewPager;
+	private SectionsPagerAdapter mSectionsPagerAdapter;
+	private ViewPager mViewPager;
+	private User currentUser;
 	
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,17 +51,28 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 
         // For each of the sections in the app, add a tab to the action bar.
         for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-            // Create a tab with text corresponding to the page title defined by
-            // the adapter. Also specify this Activity object, which implements
-            // the TabListener interface, as the callback (listener) for when
-            // this tab is selected.
             actionBar.addTab(
                     actionBar.newTab()
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
     }
+	
+	public User getCurrentUser() {
+		if(currentUser == null)
+			currentUser = helper.getCurrentPerson(this);
+		return currentUser;
+	}
 
+	private void logoutUser() {
+		currentUser = null;
+		helper.deletePreferences(this);
+		Intent intent = new Intent(this, LoginActivity.class);
+		startActivity(intent);
+		this.finish();
+	}
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -67,18 +82,14 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 	
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        
         // Create Book button
         if (id == R.id.action_createbook) {
         	CreateBook(mViewPager);
             return true;
         }
-        
         if (id == R.id.action_settings) {
+        	logoutUser();
             return true;
         }
         
