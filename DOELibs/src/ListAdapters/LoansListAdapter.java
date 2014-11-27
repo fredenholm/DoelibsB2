@@ -44,7 +44,7 @@ public class LoansListAdapter extends BaseAdapter {
 		final Loan loan = getItem(position);
 		
 		if(row == null)
-			row = _inflater.inflate(R.layout.loan_row_item, parent);
+			row = _inflater.inflate(R.layout.loan_row_item, null);
 		
 		if(loan != null) {
 			TextView titleTextView = (TextView) row.findViewById(R.id.loan_title);
@@ -56,7 +56,7 @@ public class LoansListAdapter extends BaseAdapter {
 	        locationTextView.setText(loan.LocationRoom + ", " + loan.LocationCategory);
 		}
 		
-		return null;
+		return row;
 	}
 
 }
